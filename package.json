@@ -1,0 +1,19 @@
+{
+  "name": "dice.game",
+  "version": "1.0.0",
+  "description": "Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for",
+  "main": "app1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iwt-jankretschmer/Dice.game.git"
+  },
+  "author": "{Jan Niklas Kretschmer} <{jan.kretschmer@immowelt.de}>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iwt-jankretschmer/Dice.game/issues"
+  },
+  "homepage": "https://github.com/iwt-jankretschmer/Dice.game#readme"
+}
