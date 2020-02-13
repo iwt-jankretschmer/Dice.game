@@ -5,8 +5,9 @@
 ### Install Guide:
 
 note: this is made with Visual Studio Code;
-
-
+```markdown
+to transpile to js use tsc `app1.ts` to create 
+```
 
 ```markdown
 Syntax highlighted code block
