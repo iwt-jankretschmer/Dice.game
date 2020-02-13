@@ -34,7 +34,7 @@ document.querySelector(".btn-roll").addEventListener("click", function() {
     } 
     else {
       //nextPlayer();
-      hey();
+      nextPlayer();
     }
 
     var hello= function(stati:number,useddice:number,vari:boolean){
