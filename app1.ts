@@ -63,7 +63,7 @@ document.querySelector("#score-"+activePlayer).textContent =scores[activePlayer]
 //Check if player won the Game
 if(scores[activePlayer]>= numbere ){
     document.querySelector("#name-"+activePlayer).textContent="Winner!";
-    document.querySelector('.dice').style.display='none';
+    (<HTMLElement>document.querySelector('.dice')).style.display='none';
     document.querySelector('.player-'+activePlayer+'-panel').classList.add("winner");
     document.querySelector('.player-'+activePlayer+'-panel').classList.remove("active");
     gamePlaying=false;
@@ -90,8 +90,8 @@ function nextPlayer(){
         document.querySelector(".player-0-panel").classList.toggle("active");
         document.querySelector(".player-1-panel").classList.toggle("active");
     
-        document.querySelector(".dice").style.display = "none";
-        document.querySelector(".dice2").style.display = "none";
+        (<HTMLElement>document.querySelector(".dice")).style.display = "none";
+        (<HTMLElement>document.querySelector(".dice2")).style.display = "none";
     
         //document.querySelector(".player-0-panel").classList.remove("active");
         //document.querySelector(".player-1-panel").classList.add("active");
@@ -104,8 +104,8 @@ function init(){
     roundScore = 0;
     activePlayer = 0;
     gamePlaying=true;
-    document.querySelector(".dice").style.display = "none";
-    document.querySelector(".dice2").style.display = "none";
+    (<HTMLElement>document.querySelector(".dice")).style.display = "none";
+    (<HTMLElement>document.querySelector(".dice2")).style.display = "none";
 
     document.getElementById("score-0").textContent = "0";
     document.getElementById("score-1").textContent = "0";
