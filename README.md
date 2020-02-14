@@ -13,15 +13,14 @@ to transpile to js use `tsc app1.ts` to create
 
 # installed extensions  are:
 
-- ms-vscode.vscode-typescript-next
+- **ms-vscode.vscode-typescript-next** (Important the rest is more style oriented)
 - esbenp.prettier-vscode
 - formulahendry.auto-close-tag
 - christian-kohler.path-intellisense
 - tht13.html-preview-vscode
-- 
 
 
-### Support or Contact
+### Contact
 
 Having trouble with Pages? Contact me via jan.kretschmer@immowelt.de
 
