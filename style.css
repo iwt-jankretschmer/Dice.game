@@ -161,7 +161,44 @@ i {
     height: 100px;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
-
+ /* new added should be re designed*/
+#botAdd{
+    position: absolute;
+    width: 200px;
+    left: 45%;
+    transform: translateX(-50%);
+    color: #555;
+    background: none;
+    border: none;
+    font-family: Lato;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+    *overflow: hidden;
+    top: 529px;
+}
+#botAdd{
+    border:1px solid #F00;
+}
+label {
+    position: absolute;
+    width: 220px;
+    left:57%;
+    transform: translateX(-50%);
+    color: #555;
+    background: none;
+    border: none;
+    font-family: Lato;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+    top: 520px;
+  }
+   /* new added should be re designed*/
 
 
 .winner { background-color: #f7f7f7; }
