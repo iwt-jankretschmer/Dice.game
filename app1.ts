@@ -15,10 +15,18 @@ init();
 ////document.querySelector("#current-"+activePlayer).innerHTML="<em>"+dice+"</em>"
 ////var x= document.querySelector("#score-0").textContent;
 console.log(sameSix1,sameSix2);
-document.querySelector(".btn-bot-roll").addEventListener("click",function() {
-  $(".btn-roll").click();
-}
-)
+// document.querySelector(".btn-bot-roll").addEventListener("click",function() {
+//   $(".btn-roll").click();
+// })
+// $(document).on('click', '#two', function() {
+//   $("#one").click();
+// });
+
+
+// $( ".btn-bot" ).click(function() {
+//   $( ".btn-roll" ).click();
+// });
+
 
 document.querySelector(".btn-roll").addEventListener("click", function() {
   if (gamePlaying) {

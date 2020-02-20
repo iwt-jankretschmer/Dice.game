@@ -142,7 +142,7 @@ i {
 .btn-new { top: 45px;}
 .btn-roll { top: 403px;}
 .btn-hold { top: 467px;}
-.btn-bot-roll { top: 520px;}
+.btn-bot { top: 520px;}
 
 .dice {
     position: absolute;
