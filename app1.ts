@@ -14,7 +14,7 @@ init();
 ////document.querySelector("#current-"+activePlayer).textContent=dice;
 ////document.querySelector("#current-"+activePlayer).innerHTML="<em>"+dice+"</em>"
 ////var x= document.querySelector("#score-0").textContent;
-console.log(sameSix1,sameSix2);
+console.log(sameSix1, sameSix2);
 // document.querySelector(".btn-bot-roll").addEventListener("click",function() {
 //   $(".btn-roll").click();
 // })
@@ -22,11 +22,10 @@ console.log(sameSix1,sameSix2);
 //   $("#one").click();
 // });
 
-
 // $( ".btn-bot" ).click(function() {
 //   $( ".btn-roll" ).click();
 // });
-var test1= function() {
+var test1 = function() {
   if (gamePlaying) {
     //1.Random number
     var dice1: number = Math.floor(Math.random() * 6) + 1;
@@ -36,7 +35,7 @@ var test1= function() {
     var dice2: number = Math.floor(Math.random() * 6) + 1;
 
     console.log(lastThrow2, " ", dice2);
-    
+
     // 2.Display
     var diceDom: any = document.querySelector(".dice");
     diceDom.style.display = "block";
@@ -45,7 +44,7 @@ var test1= function() {
     var diceDom: any = document.querySelector(".dice2");
     diceDom.style.display = "block";
     diceDom.src = "dice-" + dice2 + ".png";
-    console.log(sameSix1,sameSix2);
+    console.log(sameSix1, sameSix2);
 
     // 3.Update round score if number not 1
 
@@ -62,7 +61,7 @@ var test1= function() {
     }
 
     var hello = function(lastThrow: number, currentThrow: number) {
-      return lastThrow == 6 && currentThrow == 6
+      return lastThrow == 6 && currentThrow == 6;
     };
 
     console.log(activePlayer);
@@ -75,8 +74,8 @@ var test1= function() {
   }
 };
 
-document.querySelector(".btn-roll").addEventListener("click",test1);
-document.querySelector(".btn-bot").addEventListener("click",function() {
+document.querySelector(".btn-roll").addEventListener("click", test1);
+document.querySelector(".btn-bot").addEventListener("click", function() {
   if (gamePlaying) {
     //1.Random number
     var dice1: number = Math.floor(Math.random() * 6) + 1;
@@ -86,7 +85,7 @@ document.querySelector(".btn-bot").addEventListener("click",function() {
     var dice2: number = Math.floor(Math.random() * 6) + 1;
 
     console.log(lastThrow2, " ", dice2);
-    
+
     // 2.Display
     var diceDom: any = document.querySelector(".dice");
     diceDom.style.display = "block";
@@ -95,7 +94,7 @@ document.querySelector(".btn-bot").addEventListener("click",function() {
     var diceDom: any = document.querySelector(".dice2");
     diceDom.style.display = "block";
     diceDom.src = "dice-" + dice2 + ".png";
-    console.log(sameSix1,sameSix2);
+    console.log(sameSix1, sameSix2);
 
     // 3.Update round score if number not 1
 
@@ -112,7 +111,7 @@ document.querySelector(".btn-bot").addEventListener("click",function() {
     }
 
     var hello = function(lastThrow: number, currentThrow: number) {
-      return lastThrow == 6 && currentThrow == 6
+      return lastThrow == 6 && currentThrow == 6;
     };
 
     console.log(activePlayer);
@@ -123,8 +122,7 @@ document.querySelector(".btn-bot").addEventListener("click",function() {
     lastThrow1 = dice1;
     lastThrow2 = dice2;
   }
-}
-);
+});
 
 document.querySelector(".btn-hold").addEventListener("click", function() {
   if (gamePlaying) {
@@ -196,5 +194,4 @@ function init() {
   document.querySelector(".player-0-panel").classList.remove("active");
   document.querySelector(".player-0-panel").classList.add("active");
   numbere = prompt("Please enter the Point Goal");
-};
-
+}
