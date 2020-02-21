@@ -123,9 +123,7 @@ document.querySelector(".btn-bot").addEventListener("click", function() {
       console.log(lastThrow2, " ", dice2);
 
       // 2.Display
-      // setTimeout(function() {
-      //   console.log(101);
-      // }, 3000);
+      
       var diceDom: any = document.querySelector(".dice");
       diceDom.style.display = "block";
       diceDom.src = "dice-" + dice1 + ".png";
