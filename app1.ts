@@ -58,7 +58,7 @@ var test1 = function() {
       ).textContent = roundScore.toString();
     } else {
       ////nextPlayer();
-      nextPlayer();
+      nextPlayer1();
     }
 
     var hello = function(lastThrow: number, currentThrow: number) {
@@ -97,7 +97,7 @@ var holdFunction = function() {
       gamePlaying = false;
     } else {
       //next Player
-      nextPlayer();
+      nextPlayer1();
     }
   }
 };
@@ -106,69 +106,74 @@ document.querySelector(".btn-roll").addEventListener("click", test1);
 
 document.querySelector(".btn-bot").addEventListener("click", function() {
   if (activePlayer == 1) {
-    //should loop till it reaches 1/3 of the pre entered points
-    while (20 /* should enter here numbere */ >= roundScore&&activePlayer==1) {
-      
-        if (gamePlaying) {
-          //1.Random number
-          var dice1: number = Math.floor(Math.random() * 6) + 1;
+  //should loop till it reaches 1/3 of the pre entered points
+  while (
+    20 /* should enter here numbere */ >= roundScore &&
+    activePlayer == 1
+  ) {
 
-          console.log(lastThrow1, " ", dice1);
+    if (gamePlaying) {
+      //1.Random number
+      var dice1: number = Math.floor(Math.random() * 6) + 1;
 
-          var dice2: number = Math.floor(Math.random() * 6) + 1;
+      console.log(lastThrow1, " ", dice1);
 
-          console.log(lastThrow2, " ", dice2);
+      var dice2: number = Math.floor(Math.random() * 6) + 1;
 
-          // 2.Display
-          var diceDom: any = document.querySelector(".dice");
-          diceDom.style.display = "block";
-          diceDom.src = "dice-" + dice1 + ".png";
+      console.log(lastThrow2, " ", dice2);
 
-          var diceDom: any = document.querySelector(".dice2");
-          diceDom.style.display = "block";
-          diceDom.src = "dice-" + dice2 + ".png";
-          console.log(sameSix1, sameSix2);
+      // 2.Display
+      // setTimeout(function() {
+      //   console.log(101);
+      // }, 3000);
+      var diceDom: any = document.querySelector(".dice");
+      diceDom.style.display = "block";
+      diceDom.src = "dice-" + dice1 + ".png";
 
-          // 3.Update round score if number not 1
+      var diceDom: any = document.querySelector(".dice2");
+      diceDom.style.display = "block";
+      diceDom.src = "dice-" + dice2 + ".png";
+      console.log(sameSix1, sameSix2);
 
-          if (
-            dice1 !== 1 &&
-            dice2 !== 1 &&
-            sameSix1 !== true &&
-            sameSix2 !== true
-          ) {
-            //add score
-            roundScore += dice1;
-            roundScore += dice2;
-            document.querySelector(
-              "#current-" + activePlayer
-            ).textContent = roundScore.toString();
-          } else {
-            ////nextPlayer();
-            nextPlayer();
-          }
+      // 3.Update round score if number not 1
 
-          var hello = function(lastThrow: number, currentThrow: number) {
-            return lastThrow == 6 && currentThrow == 6;
-          };
-
-          console.log(activePlayer);
-
-          sameSix1 = hello(lastThrow1, dice1);
-          sameSix2 = hello(lastThrow2, dice2);
-
-          lastThrow1 = dice1;
-          lastThrow2 = dice2;
-        }
+      if (
+        dice1 !== 1 &&
+        dice2 !== 1 &&
+        sameSix1 !== true &&
+        sameSix2 !== true
+      ) {
+        //add score
+        roundScore += dice1;
+        roundScore += dice2;
+        document.querySelector(
+          "#current-" + activePlayer
+        ).textContent = roundScore.toString();
+      } else {
+        ////nextPlayer();
+        nextPlayer1();
       }
-    
-    holdFunction();
+
+      var hello = function(lastThrow: number, currentThrow: number) {
+        return lastThrow == 6 && currentThrow == 6;
+      };
+
+      console.log(activePlayer);
+
+      sameSix1 = hello(lastThrow1, dice1);
+      sameSix2 = hello(lastThrow2, dice2);
+
+      lastThrow1 = dice1;
+      lastThrow2 = dice2;
+    }
   }
+  }
+  holdFunction();
 });
 
 document.querySelector(".btn-hold").addEventListener("click", holdFunction);
 
-function nextPlayer() {
+ var nextPlayer1= function nextPlayer() {
   //activePlayer === 0 ? (activePlayer = 1) : (activePlayer = 0);
   //same as
   if (activePlayer === 0) {
